@@ -1,5 +1,7 @@
 ---
 
+deploy_functions_version: '1-latest'
+
 deploy_functions_setup: full
 deploy_functions_place_default_setup_local: false
 deploy_functions_templates_dir: '/usr/local/osshelp'
@@ -8,13 +10,13 @@ deploy_functions_default_setup_local_target: "{{ deploy_functions_templates_dir 
 
 files:
   - name: default-setup
-    url: https://oss.help/scripts/lxc/deploy-functions/default-setup
-    checksum: "sha256:https://oss.help/scripts/lxc/deploy-functions/SHA256SUMS"
+    url: "https://oss.help/scripts/lxc/deploy-functions/{{ deploy_functions_version }}/default-setup"
+    checksum: "sha256:https://oss.help/scripts/lxc/deploy-functions/{{ deploy_functions_version }}/SHA256SUMS"
     dst_dir: /usr/local/osshelp
     mode: 700
   - name: deploy-functions.sh
-    url: https://oss.help/scripts/lxc/deploy-functions/deploy-functions.sh
-    checksum: "sha256:https://oss.help/scripts/lxc/deploy-functions/SHA256SUMS"
+    url: "https://oss.help/scripts/lxc/deploy-functions/{{ deploy_functions_version }}/deploy-functions.sh"
+    checksum: "sha256:https://oss.help/scripts/lxc/deploy-functions/{{ deploy_functions_version }}/SHA256SUMS"
     dst_dir: /usr/local/include/osshelp
     mode: 600
   - name: yq

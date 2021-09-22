@@ -19,6 +19,7 @@ Short description here.
 | Param | Default | Description |
 | -------- | -------- | -------- |
 | `deploy_functions_setup` | `full` | Setup mode. See [OSSHelp KB article](https://oss.help/kb4895) |
+| `deploy_functions_version` | `1-latest` | Version to install. |
 | `deploy_functions_place_default_setup_local` | `false` | Whether to generate custom default-setup.local file from j2-template. |
 | `deploy_functions_templates_dir` | `/usr/local/osshelp` | Absolute path to directory to place default-setup.local. |
 | `deploy_functions_default_setup_local_source` | `default-setup.local.j2` | Relative path to j2-template of default-setup.local in repository. |
